@@ -1,0 +1,32 @@
+name: CI
+
+on:
+    pull_request:
+        branches: [main]
+    push:
+        branches: [main]
+concurrency:
+    group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+    cancel-in-progress: true
+
+jobs:
+    links: # Slow workflow to run in parallel to all other jobs from start
+        name: Linkspector
+        permissions:
+            contents: read
+        uses: ./.github/workflows/links.yml
+    lints: # fast lints
+        name: Lints
+        permissions:
+            contents: read
+        uses: ./.github/workflows/lints.yml
+    matlab: # heavy MATLAB checks
+        permissions:
+            contents: read
+        needs: lints
+        uses: ./.github/workflows/matlab.yml
+    webpage-build:
+        permissions:
+            contents: read
+        needs: [lints, links]
+        uses: ./.github/workflows/webpage-build.yml

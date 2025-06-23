@@ -1,0 +1,22 @@
+on:
+  workflow_call:
+  workflow_dispatch:
+  schedule:
+    - cron: 0 0 * * 1   # midnight every Monday to preserve the cache
+
+jobs:
+  buildtool:
+    permissions:
+      contents: read
+    strategy:
+      matrix:
+        release: [R2023a, R2024b]
+    name: MATLAB checks
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: matlab-actions/setup-matlab@v2
+        with:
+          release: ${{ matrix.release }}
+          cache: true
+      - uses: matlab-actions/run-build@v2

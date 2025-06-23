@@ -1,0 +1,13 @@
+{
+  "version": "0.2",
+  "language": "en",
+  "words": [],
+  "flagWords": [],
+  "ignorePaths": [
+    "CHANGELOG.md",
+    "**/*.yml",
+    "**/*.m",
+    "**/*.json"
+  ],
+  "ignoreWords": []
+}

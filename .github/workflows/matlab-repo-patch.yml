@@ -1,0 +1,21 @@
+# Experimental workflow to pull the latest release of matlab-repo-init
+# and apply it as a patch to the current repository.
+# The action is not intended for production use and is subject to change.
+# It is recommended to simply download official release artifacts
+
+name: matlab-repo-patch
+
+on:
+    workflow_dispatch:
+
+permissions:
+    contents: write
+
+jobs:
+    matlab-repo-patch:
+        runs-on: ubuntu-latest
+        steps:
+        - uses: actions/checkout@v4
+          with:
+            token: ${{ secrets.MATLAB_REPO_INIT_PATCH }}
+        - uses: djmaxus/matlab-repo-init/.github/actions/patch@v0.17.1

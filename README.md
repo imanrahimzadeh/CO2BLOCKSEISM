@@ -1,4 +1,7 @@
 # CO2BLOCKSEISM
+
+![CI](../../actions/workflows/ci.yml/badge.svg?branch=main)
+
 An analytical tool for screening subsurface CO<sub>2</sub> storage resources constrained by induced seismicity
 
 CO2BLOCKSEISM extends the tool [CO2BLOCK](https://github.com/co2block/CO2BLOCK), which estimates and optimizes CO<sub>2</sub> storage capacity subject to reservoir injectivity limitations. To learn more about the theory behind CO2BLOCKSEISM, please refer to the following paper:
