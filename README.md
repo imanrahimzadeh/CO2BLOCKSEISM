@@ -1,6 +1,6 @@
 # CO2BLOCKSEISM
 
-![CI](../../actions/workflows/ci.yml/badge.svg?branch=main)
+![CI](https://github.com/imanrahimzadeh/CO2BLOCKSEISM/actions/workflows/ci.yml/badge.svg?branch=main)
 
 An analytical tool for screening subsurface CO<sub>2</sub> storage resources
 constrained by induced seismicity
@@ -9,8 +9,9 @@ CO2BLOCKSEISM extends the tool [CO2BLOCK](https://github.com/co2block/CO2BLOCK),
 which estimates and optimizes CO<sub>2</sub> storage capacity subject to
 reservoir injectivity limitations. To learn more about the theory behind
 CO2BLOCKSEISM, please refer to the following paper:
+
 - Kivi, I.R., De Simone, S. and Krevor, S., 2024. A simplified physics model for
-  estimating subsurface CO<sub>2</sub> storage resources constrained ‎by fault
+  estimating subsurface CO<sub>2</sub> storage resources constrained by fault
   slip potential. EarthArXiv. <https://doi.org/10.31223/X5KM65>
 
 The CO2BLOCKSEISM tool is provided here in the context of two demonstration
@@ -19,18 +20,18 @@ seismicity](https://github.com/imanrahimzadeh/CO2BLOCKSEISM/tree/main/Oklahoma%2
 and [Utsira storage
 capacity](https://github.com/imanrahimzadeh/CO2BLOCKSEISM/tree/main/Utsira%20storage%20capacity).
 A general version of the code that can be applied to any study will be provided
-soon in this repository. 
+soon in this repository.
 
 Should you have any questions/comments/suggestions, please contact Iman R. Kivi
-through the email i.rahimzadeh-kivi@imperial.ac.uk
+through the email <i.rahimzadeh-kivi@imperial.ac.uk>
 
 CO2BLOCKSEISM is open-source software. If you use it for academic purposes,
-please cite the reference paper above. 
-
- 
+please cite the reference paper above.
 
 ## **Code structure**
+
 The tool comprises a number of scripts and functions as detailed below:
+
 - "CO2BLOCKSEISM.m": this is the main script, where all input data for the study
   are specified. This script calls several functions to perform the required
   calculations,
@@ -56,9 +57,10 @@ The tool comprises a number of scripts and functions as detailed below:
 - "plot.m": this script visualizes the output data through appropriate plots.
   Scientific colormaps developed by Fabio Crameri (2018) are used in these
   plots. The functions, database and instructions for using Crameri's colormaps
-  are also provided.     
+  are also provided.
 
 ## **Input**
+
 Input parameters are introduced to the tool either directly within the script
 "CO2BLOCKSEISM.m" or through the input .xlsx file. The input file involves
 average values of the hydraulic properties of the aquifer required to estimate
@@ -79,21 +81,17 @@ distributions of injection sites and faults are specified in the script
 "CO2BLOCKSEISM.m". The script reads data for the distributions of the injection
 sites and faults from separate input .xlsx files. Additional information, e.g.,
 geographical data or induced seismicity records may be added for use in the
-plots.  
+plots.
 
 ## **Output**
+
 The main outputs of the tool are the spatial and temporal evolution of
 injection-induced pore pressure changes, fault slip probability, possible
 earthquake magnitudes and the maximum CO<sub>2</sub> storage capacity that can
-be safely achieved. The tool saves the plots in the specified directory. 
+be safely achieved. The tool saves the plots in the specified directory.
 
 The results of the tool calculations for the two demonstration studies are
 provided as "Results_Utsira.mat" and "Results_OK.mat". One may simply load the
 results and just run the script "plot.m" to reproduce all figures presented in
 the reference paper mentioned above. Alternatively, the script "CO2BLOCKSEISM.m"
-with the provided input data can be run to regenerate the results.  
-
-
-
-
-
+with the provided input data can be run to regenerate the results.
