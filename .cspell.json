@@ -9,5 +9,5 @@
     "**/*.m",
     "**/*.json"
   ],
-  "ignoreWords": []
+  "ignoreWords": ["Simulink"]
 }
