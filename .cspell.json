@@ -1,7 +1,17 @@
 {
   "version": "0.2",
   "language": "en",
-  "words": [],
+  "words": [
+    "Simulink",
+    "colormaps",
+    "Nordbotten",
+    "Iman",
+    "injectivity",
+    "Krevor",
+    "Utsira",
+    "ORCID",
+    "Rahimzadeh"
+  ],
   "flagWords": [],
   "ignorePaths": [
     "CHANGELOG.md",
@@ -9,5 +19,9 @@
     "**/*.m",
     "**/*.json"
   ],
-  "ignoreWords": ["Simulink"]
+  "ignoreWords": [
+    "BLOCKSEISM",
+    "Geomech_prob"
+  ],
+  "enabled": true
 }
